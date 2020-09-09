@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-wh-JWp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hz5-VO-lxz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="8RU-4C-LxF">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="y1D-tM-eei">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="M4e-oJ-fQN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Restart" image="arrow.clockwise" catalog="system" id="JTO-Z5-BiG">
+                                            <connections>
+                                                <action selector="restartMeme:" destination="BYZ-38-t0r" id="niU-w8-YXw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSb-ph-S62">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="v4L-Ms-J8L"/>
+                                    <barButtonItem title="Camera" image="camera" catalog="system" width="100.5" id="sjr-5x-eSh">
+                                        <connections>
+                                            <action selector="PickAnImageFromCamera:" destination="BYZ-38-t0r" id="nhb-hD-gJ8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Album" image="folder" catalog="system" width="95.5" id="O4o-mG-wom">
+                                        <connections>
+                                            <action selector="PickAnImageFromAlbum:" destination="BYZ-38-t0r" id="P15-gy-5wg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jUE-Wa-509"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jA-U2-BdF">
+                                <rect key="frame" x="0.0" y="743.5" width="414" height="49.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-Dx-FFS">
+                                <rect key="frame" x="0.0" y="108" width="414" height="49.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mSb-ph-S62" firstAttribute="top" secondItem="4jA-U2-BdF" secondAttribute="bottom" constant="20" id="1HR-Kz-JWK"/>
+                            <constraint firstItem="mSb-ph-S62" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="858-PA-Uee"/>
+                            <constraint firstItem="mSb-ph-S62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AfL-li-T9G"/>
+                            <constraint firstItem="uPJ-wh-JWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KRa-V9-bXi"/>
+                            <constraint firstItem="mSb-ph-S62" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KgH-yd-BrE"/>
+                            <constraint firstItem="hz5-VO-lxz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LEd-NX-c3H"/>
+                            <constraint firstItem="lZx-Dx-FFS" firstAttribute="top" secondItem="hz5-VO-lxz" secondAttribute="bottom" constant="20" id="Mdr-dp-MdS"/>
+                            <constraint firstItem="uPJ-wh-JWp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PPg-Xp-OK3"/>
+                            <constraint firstItem="hz5-VO-lxz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TPq-wQ-c2E"/>
+                            <constraint firstItem="4jA-U2-BdF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WPr-37-sIM"/>
+                            <constraint firstItem="4jA-U2-BdF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZuO-5b-9Ff"/>
+                            <constraint firstItem="hz5-VO-lxz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gjE-lD-I5g"/>
+                            <constraint firstItem="lZx-Dx-FFS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jcY-hT-YTc"/>
+                            <constraint firstItem="mSb-ph-S62" firstAttribute="top" secondItem="uPJ-wh-JWp" secondAttribute="bottom" id="ndr-4P-90v"/>
+                            <constraint firstItem="uPJ-wh-JWp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qc8-2q-Nbg"/>
+                            <constraint firstItem="lZx-Dx-FFS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zs1-mP-EVq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="NavigationBar" destination="hz5-VO-lxz" id="w5q-Aw-nXh"/>
+                        <outlet property="Toolbar" destination="mSb-ph-S62" id="DOk-ao-DGZ"/>
+                        <outlet property="bottomTextField" destination="4jA-U2-BdF" id="pPU-It-vez"/>
+                        <outlet property="cameraButton" destination="sjr-5x-eSh" id="nMh-1R-tVd"/>
+                        <outlet property="imagePickerView" destination="uPJ-wh-JWp" id="KBK-Vy-vkg"/>
+                        <outlet property="topTextField" destination="lZx-Dx-FFS" id="Pv9-Tp-Mw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="folder" catalog="system" width="64" height="46"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
